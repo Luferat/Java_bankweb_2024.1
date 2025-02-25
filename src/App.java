@@ -15,10 +15,10 @@ public class App {
         agencia.email = "campogrande@bankweb.com";
         agencia.tel = "+55 (21) 555-55555";
 
-        pessoa.cpf = "111.222.444-99";
-        pessoa.nome = "Carla Dias";
-        pessoa.tel = "+55 (22) 4444-55555";
-        pessoa.email = "carladias@email.com";
+        pessoa.setCpf("111.222.444-99");
+        pessoa.setNome("Carla Dias");
+        pessoa.setTel("+55 (22) 4444-55555");
+        pessoa.setEmail( "carladias@email.com");
 
         conta.numero = "100001";
         conta.agencia = agencia;
@@ -26,7 +26,7 @@ public class App {
         conta.saldo = 1000;
 
         System.out.println("Agencia : " + conta.agencia.nome);
-        System.out.println("Cliente : " + conta.pessoa.nome);
+        System.out.println("Cliente : " + conta.pessoa.getNome());
         System.out.println("Saldo   : " + conta.saldo);
         
     }
