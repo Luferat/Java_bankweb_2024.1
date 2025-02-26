@@ -8,19 +8,32 @@ public class Pessoa {
     private String email;
     private String tel;
 
-    public void setNome(String nome){
-        this.nome = nome;
+    public Pessoa(String nome, String email, String tel) throws Exception {
+        this.setNome(nome); // this.nome = nome
+        this.setEmail(email); // this.email = email
+        this.setTel(tel); // this.tel = tel
     }
 
-    public String getNome(){
+    public Pessoa(String nome, String cpf) throws Exception {
+        this.setNome(nome);
+        this.setCpf(cpf);
+    }
+
+    public void setNome(String nome) throws Exception {
+        if (nome.trim().equals(""))
+            throw new Exception("Nome embranco!");
+        this.nome = nome.trim();
+    }
+
+    public String getNome() {
         return this.nome;
     }
 
-    public void setCpf(String cpf){
+    public void setCpf(String cpf) {
         this.cpf = cpf;
-    }  
-    
-    public String getCpf(){
+    }
+
+    public String getCpf() {
         return this.cpf;
     }
 
@@ -56,5 +69,4 @@ public class Pessoa {
         this.tel = tel;
     }
 
- 
 }
